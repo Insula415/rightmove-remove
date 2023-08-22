@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Rightmove Property Filter",
+  "description": "This extension will filter out selected property types on Rightmove",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.rightmove.co.uk/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab"]
+}

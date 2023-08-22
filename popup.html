@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rightmove Property Filter</title>
+    <style>
+      body {
+        width: 300px;
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: #f0f4f8;
+        margin: 20px;
+        color: #333;
+      }
+      .rm-heading {
+        font-weight: 600;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .rm-label-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .rm-label {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        font-size: 14px;
+        background: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+      .rm-label:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+      .rm-checkbox {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: #e4e4e4;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+      }
+      .rm-checkbox:checked {
+        background: #4caf50;
+      }
+      .rm-checkbox:checked::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        display: block;
+      }
+      .rm-button {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .rm-main:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+      }
+
+      .rm-reset {
+        background-color: rgb(212, 8, 8);
+      }
+
+      .rm-reset:hover {
+        background-color: rgb(187, 14, 14);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="rm-heading">Select Properties to Hide</h3>
+    <div class="rm-label-container">
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Flat" /> Flat</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Studio" /> Studio</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Apartment" />
+        Apartment</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Terraced" />
+        Terraced</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="SemiDetached" />
+        SemiDetached</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Cottage" />
+        Cottage</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="Bungalow" />
+        Bungalow</label
+      >
+      <label class="rm-label"
+        ><input class="rm-checkbox" type="checkbox" id="House" /> House</label
+      >
+    </div>
+    <button class="rm-button rm-main" id="save">Save Settings</button>
+    <button class="rm-button rm-reset" id="reset">Reset Filters</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
